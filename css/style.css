@@ -152,7 +152,7 @@ transform: translateY(-50px); /*si uso solo translate y dos valores separdaos po
 
 @keyframes slide {
     0% {
-    background-color: url("../img/mapamundiBlack.jpg");  
+    background-image: url("../img/mapamundiBlack.jpg");  
     }
     100%{
     background-image: url("../img/mapamundi.jpg");
