@@ -1,0 +1,173 @@
+body {
+    background-color: #555555; 
+}
+
+/* csstricks --> la bilbia de css */
+
+.fila1{ /*al contenedro padre es a la que se le aplican las propiedades de flexbox*/
+    width: 80%;
+    max-width: 1200px; /*responsive: si es menor a 1200, toma el widhht enen %, si se pasa, no pasa de 80%*/
+    height: 600px;
+    border: 2px solid #ffd700;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    display: flex; /* Por defecto, los elementos div se irganizan a la izquierda uno debajo de otro. la propiedad display: flex (flexbos) se utiliza para ajustar contenido en dos ejes (x,y) */
+   
+   /*elementos para mas de un item dentro den contenedor/*
+    /*justify-content: space-evenly;*/ /*ajusta columna respecto al eje x. Otras propiedades: center, flex-end, flex-star- tres tipos de space, el space-evenly es el mas utilizado*/
+    /*
+    space-evenly --> reparte los espacios
+    space-around --> 
+    space-beetween -->
+
+    */
+    /*align-items: flex-start;*/ /* propeidad para eje y: center, felx-end, flex-star, unicamente*/
+}
+
+.fila1 .cont_btn{
+    width: 50%;
+    height: 84%;
+    background-color: #8a2be2;
+    text-align: center;
+    padding: 48px 30px;
+
+}
+
+.fila1 .cont_btn h2{
+    color: #f5deb3;
+    font-size: 50px;
+}
+
+.fila1 .cont_btn button{
+    padding: 8px 15px;
+    font-size: 22px;
+    border: 2px solid wheat;
+    margin: 10px 14px;
+    background: #86045b; /* si hay imagen de fondo, poner transparent */
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fila1 .cont_fig{
+    width: 50%;
+    height: 92%;
+    background-color: #86045b;
+    text-align: center;
+    padding-top: 48px;
+}
+
+.fila1 .cont_fig h2{
+    color: #f5deb3;
+    font-size: 50px;
+}
+
+.fila1 .cont_fig #figura{
+    width: 200px;
+    height: 200px;
+    /* background: black; */
+    margin: 0 auto;
+    /* inicio propiedades añadidas fuera del ejercicio*/
+    background-image: url(../img/fondoNegro.jpg);
+    background-size: contain;
+    background-position: 80%;
+    /*fin propiedades añadidas fuera del ejercicio*/
+    transition: 1s;  /*.5 para web, para ejercicios otro*/
+    
+}
+
+
+.menu{
+    padding: 8px 20px;
+    background: #8a2be2;
+    color: #f5deb3;
+    /* position: absolute; */
+    position: absolute;
+    right: 20px; 
+    bottom: 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* ESTILOS DE LA FIG. AL DAR CLIC A LOS BOTONES */
+
+.fila1 .cont_fig #figura.circulo{ /*No hay espacio entre el id y elemento por que no son elementos separados o anidados. Si agrego los contenedores padre, puedo modificar más propiedades, como el background color por ejemplo*/
+    border-radius: 50%;
+    transform: rotate(360deg);
+    /* background: #ffd700; */
+    background-image: url("../img/fondoAmarillo.jpg");
+    
+}
+
+.fila1 .cont_fig #figura.arriba{ /**/
+transform: translateY(-50px); /*si uso solo translate y dos valores separdaos por comas, genera diagonales. Promer valor x, segundo y*/
+}
+
+.fila1 .cont_fig #figura.abajo{
+    transform: translateY(50px);
+}
+
+.fila1 .cont_fig #figura.izq{
+    transform: translateX(-50px);
+}
+
+.fila1 .cont_fig #figura.der{
+    transform: translateX(50px);
+}
+
+.fila1 .cont_fig #figura.diaSupDer{
+    transform: translate(50px, -50px);
+}
+
+.fila1 .cont_fig #figura.diaInfDer{
+    transform: translate(50px, 50px);
+}
+
+.fila1 .cont_fig #figura.diaSupIzq{
+    transform: translate(-50px, -50px);
+}
+
+.fila1 .cont_fig #figura.diaInfIzq{
+    transform: translate(-50px, 50px);
+}
+
+/* https://uniwebsidad.com/foro/pregunta/472/como-redondear-con-css-imagenes-cuadradas-y-rectangulares/ */
+.fila1 .cont_fig #figura.imagen{
+    background-image: url("../img/mapamundi.jpg");
+    background-size: contain;
+    width: 55%;
+    /* background-repeat: no-repeat; */
+    background-position: 80%;
+    border-radius: 50%;
+    /*animaci{on añadida fiera del ejercicio*/
+    animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+    background-color: url("../img/mapamundiBlack.jpg");  
+    }
+    100%{
+    background-image: url("../img/mapamundi.jpg");
+    }
+}
+/* https://cybmeta.com/formas-basicas-con-css-triangulos-circulos-trapecios-rectangulos-cuadrados */
+.fila1 .cont_fig #figura.rombo{
+    
+    transform: translateY(18px) rotate(45deg) skew(10deg, 10deg);
+}
+
+
+
+
+
+
+
+

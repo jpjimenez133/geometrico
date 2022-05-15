@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar datos avatar</title>
+    <link rel="stylesheet" href="css/style-avatar.css">
+</head>
+<body>
+    <div class="fila2">
+        <div id="formulario">
+            <h2>INFO AVATAR</h2>
+                 <form > <!-- action="#" se quita este atributo del form para que no se actualice el avatar y mantenga los datos -->
+                        <label for="#">Nombres:</label> <!--el titulo del campo, no el campo -->
+                            <input type="text" id="cNombres" placeholder="ejemplo: Jonny"> <br>
+
+                        <label for="#">Edad:</label>
+                            <input type="number" id="cEdad" placeholder="ejemplo: 20"> <br>
+
+                        <label for="#">Fecha de nacimiento:</label>
+                            <input type="date" id="cFecha"> <br>
+
+                        <label for="#">Género</label> 
+                            <select name="" id="cGenero">
+                                <option value="">Seleccionar</option>
+                                <option value="Femenino">Femenino</option>  <!--lo que se guarda en las BBDD es el value, el texto es lo que se muestra -->
+                                <option value="Masculino">Masculino</option>
+
+                            </select> <!-- /* name en php*/ --> <br>
+
+                        <label for="#">E-mail:</label>
+                                <input type="email" id="cEmail" placeholder="ejemplo: tucorreo@gmail.com"> <br>
+
+                        <label for="#">Descripción personalidad:</label>
+                                <textarea name="" id="cDescripcion" cols="30" rows="2"></textarea> <br>
+                                
+                        <label for="#">Color:</label> 
+                            <select name="" id="cColor">
+                                    <option value="">Seleccionar</option>
+                                    <option value="Amarillo">Amarillo</option>  
+                                    <option value="Azul">Azul</option>
+                                    <option value="Rojo">Rojo</option>
+        
+                            </select> <br>
+
+                </form>  <!-- action es para php-->
+                <button onclick="capturarDatos()" type="submit">Enviar</button> 
+                <!-- tambien si se quita el type submit por si genera conflicto con la captura o incluso sacarlo del formulario -->
+
+        </div>
+        <div id="card-avatar">
+            <h2>AVATAR</h2>
+            <img id="foto" src="img/avatar.png" alt="Avatar por defecto">
+            <!-- <div id="avatar"></div> -->
+                <P><B>Nombre:</B></P>
+                <p id="mNombres"></p>
+                <P><B>Edad:</B></P>
+                <p id="mEdad"></p>
+                <P><B>Fecha:</B></P>
+                <p id="mFecha"></p>
+                <P><B>Género:</B></P>
+                <p id="mGenero"></p>
+                <P><B>Email:</B></P>
+                <p id="mEmail"></p>
+                <P><B>Descripción:</B></P>
+                <p id="mDescripcion"></p>
+        </div>
+
+        <a class="menu" href="index.html">JUEGO GEOMÉTRICO</a> 
+    </div>
+    
+    
+    
+    <script src="js/functions.js"></script>
+</body>
+</html>

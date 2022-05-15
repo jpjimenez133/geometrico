@@ -1,0 +1,108 @@
+body {
+    background-color: #00794a; 
+}
+/* https://coolors.co/ */
+/* https://colorhunt.co/ */
+
+body h2{
+   font-size: 30px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.fila2{ 
+    width: 80%;
+    width: 1200px;
+    /* height: 900px; */ /* e alto de un elemento lo define el contenido, a veces no es necesario definir el height */
+    border: 2px solid #f8f8f8;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+}
+
+.fila2 #formulario{
+    width: 50%;
+    width: 700px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.fila2 #card-avatar{
+    width: 50%;
+    width: 500px;
+    min-height: 1000px; /*esto evita que el contenido no se limite por un alto fijo*/
+    padding: 30px;
+    text-align: center;
+    background: #acff7caf;
+}
+
+.fila2 #formulario label{
+    display: block;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 300;
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.fila2 #formulario input{
+    width: 400px;
+    padding: 8px 15px;
+    font-size: 20px;
+    border: 2px solid #3535359a;
+}
+
+.fila2 #formulario select{ /*el ancho debe ser un poco mayor que el input paa qeu se vea igual */
+    width: 430px;
+    padding: 8px 15px;
+    font-size: 20px;
+    border: 2px solid #3535359a;
+
+}
+
+.fila2 #formulario textarea{
+    width: 400px;
+    padding: 8px 15px;
+    font-size: 20px;
+    border: 2px solid #3535359a;
+
+}
+
+.fila2 #formulario button{
+    width: 110px;
+    padding: 8px 15px;
+    font-size: 25px;
+    text-align: center;
+    color: #f5fffb;
+    border: 1px solid #f3e638;
+    background: #21d421;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.fila2 #card-avatar img{
+    width: 300px; /*esto se ajusa en caso de que no guarde o borre los campos del from*/
+}
+
+.fila2 #card-avatar p b{
+    font-size: 25px;
+    /* margin-top: 20px; */
+    /* color: #fa7474ca; */
+
+}
+
+.menu{
+    padding: 8px 20px;
+    background: #0e8d0e;
+    color: #f4f0e9;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #f3e638;
+    /* position: absolute; */
+    position: absolute;
+    right: 20px; 
+    bottom: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
